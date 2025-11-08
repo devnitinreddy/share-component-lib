@@ -1,0 +1,65 @@
+{
+	"name": "@share-component-lib/components",
+	"version": "1.0.0",
+	"description": "Shared component library for multi-tenant UmiJS applications",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/types/index.d.ts",
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "yarn clean && rollup -c rollup.config.cjs && tsc --declaration --emitDeclarationOnly --outDir dist/types",
+		"dev": "rollup -c rollup.config.cjs -w",
+		"clean": "rm -rf dist",
+		"prepare": "yarn build"
+	},
+	"peerDependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"@material-ui/core": "^4.12.4"
+	},
+	"dependencies": {
+		"@material-ui/core": "^4.12.4",
+		"@material-ui/icons": "^4.11.3",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^29.0.0",
+		"@rollup/plugin-node-resolve": "^16.0.3",
+		"@rollup/plugin-typescript": "^12.3.0",
+		"@types/react": "^17.0.89",
+		"@types/react-dom": "^17.0.26",
+		"rollup": "^4.53.1",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-terser": "^7.0.2",
+		"tslib": "^2.8.1",
+		"typescript": "^5.9.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nitinreddy3/share-component-lib.git"
+	},
+	"keywords": [
+		"react",
+		"components",
+		"shared",
+		"multi-tenant",
+		"material-ui",
+		"umijs",
+		"typescript",
+		"ui-library",
+		"theme"
+	],
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"author": "",
+	"license": "ISC"
+}

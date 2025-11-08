@@ -1,0 +1,29 @@
+# Source files
+src/
+rollup.config.cjs
+tsconfig.json
+
+# Development files
+node_modules/
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Tests (if added later)
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Misc
+*.log
+.DS_Store
+yarn.lock
+package-lock.json
+
+# Documentation
+WARP.md
+
