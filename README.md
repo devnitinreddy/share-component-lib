@@ -1,5 +1,7 @@
 # Shared Component Library
 
+> **📦 PUBLIC PACKAGE**: Available on npm as `@share-component-lib/components`
+
 A reusable component library for multi-tenant UmiJS applications. Built with React 17, TypeScript, and Material-UI v4.
 
 ## Features
@@ -12,25 +14,25 @@ A reusable component library for multi-tenant UmiJS applications. Built with Rea
 
 ## Installation
 
-⚠️ **This is a private package** - not publicly available on npm.
-
-### For Development (Local)
-
-Currently configured with local file reference:
+### From npm (Recommended)
 
 ```bash
-# In umijs-mono-repo - already configured
+# Using npm
+npm install @share-component-lib/components
+
+# Using yarn
+yarn add @share-component-lib/components
+```
+
+### For Local Development
+
+If you're working in a monorepo setup:
+
+```bash
+# In umijs-mono-repo - configured with local reference
 # package.json has: "file:../share-component-lib"
 yarn install
 ```
-
-### For Production
-
-See [PRIVATE-PACKAGE-SETUP.md](./PRIVATE-PACKAGE-SETUP.md) for distribution options:
-- GitHub Packages
-- Git Direct Install
-- Private npm Registry (Verdaccio)
-- Local File Reference (current)
 
 ## Components
 
@@ -174,11 +176,15 @@ function BruceHome() {
 3. Add to main `src/index.ts`
 4. Build and test
 
-## Privacy
+## Publishing
 
-🔒 **Private Package** - This package is configured as private and requires authentication to install.
+See [PUBLISHING.md](./PUBLISHING.md) for detailed publishing instructions.
 
-See [PRIVATE-PACKAGE-SETUP.md](./PRIVATE-PACKAGE-SETUP.md) for setup instructions.
+Quick publish:
+```bash
+yarn build
+npm publish --access public
+```
 
 ## License
 
