@@ -1,12 +1,13 @@
-# Publishing Guide
+# Publishing Guide - Private Package
 
-This guide explains how to publish the shared component library to npm.
+This guide explains how to publish the shared component library as a **private npm package**.
 
 ## Prerequisites
 
 1. **npm account**: Register at [npmjs.com](https://www.npmjs.com/)
 2. **npm login**: Run `npm login` in your terminal
-3. **Organization access** (optional): If using `@share-component-lib` scope, you need access to that organization
+3. **Organization access** (required): You need access to the `@share-component-lib` organization or use your own scoped package
+4. **Paid npm account**: Private packages require a paid npm account (Pro, Teams, or Enterprise)
 
 ## Before Publishing
 
@@ -66,17 +67,20 @@ npm login
 npm whoami
 ```
 
-### Publish to npm
+### Publish to npm (Private)
 
 ```bash
 # Dry run (check what will be published)
 npm publish --dry-run
 
-# Publish to npm
-npm publish
+# Publish as private package
+npm publish --access restricted
 ```
 
-For scoped packages (like `@share-component-lib`), ensure `publishConfig.access` is set to `"public"` in `package.json`.
+**Note**: This package is configured as **private** (`"private": true` and `"access": "restricted"`). This means:
+- It will NOT be publicly visible on npmjs.com
+- Only authenticated users with access can install it
+- Requires a paid npm account
 
 ## Post-Publishing
 
@@ -154,23 +158,48 @@ yarn clean
 yarn build
 ```
 
-## Alternative: Private npm Registry
+## Alternative Distribution Methods
 
-If you don't want to publish publicly:
+Since this is a private package, here are alternative ways to use it:
 
-### Option 1: GitHub Packages
+### Option 1: GitHub Packages (Recommended)
+
+Publish to GitHub Packages instead of npm:
 
 Update `package.json`:
 
 ```json
 {
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@YOUR_GITHUB_USERNAME"
   }
 }
 ```
 
-### Option 2: Local Path
+Then publish:
+
+```bash
+# Authenticate with GitHub
+npm login --registry=https://npm.pkg.github.com
+
+# Publish
+npm publish
+```
+
+Consuming project setup (in `umijs-mono-repo`):
+
+Create `.npmrc`:
+```
+@share-component-lib:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+```
+
+Then install:
+```bash
+yarn add @share-component-lib/components
+```
+
+### Option 2: Local File Reference (Current Setup)
 
 In `umijs-mono-repo/package.json`:
 
@@ -180,6 +209,53 @@ In `umijs-mono-repo/package.json`:
     "@share-component-lib/components": "file:../share-component-lib"
   }
 }
+```
+
+This is the current setup and works great for development and monorepo scenarios.
+
+### Option 3: Git Repository
+
+Install directly from Git:
+
+```bash
+# From GitHub
+yarn add nitinreddy3/share-component-lib
+
+# Or from a specific branch/tag
+yarn add nitinreddy3/share-component-lib#v1.0.0
+```
+
+Update `package.json`:
+```json
+{
+  "dependencies": {
+    "@share-component-lib/components": "github:nitinreddy3/share-component-lib#main"
+  }
+}
+```
+
+### Option 4: Private npm Registry (Verdaccio)
+
+For teams, you can host your own private npm registry:
+
+1. Install Verdaccio:
+```bash
+npm install -g verdaccio
+verdaccio
+```
+
+2. Configure `package.json`:
+```json
+{
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}
+```
+
+3. Publish:
+```bash
+npm publish --registry http://localhost:4873
 ```
 
 ## CI/CD Publishing

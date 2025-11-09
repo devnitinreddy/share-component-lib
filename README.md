@@ -12,21 +12,25 @@ A reusable component library for multi-tenant UmiJS applications. Built with Rea
 
 ## Installation
 
-From the umijs-mono-repo, link this library:
+⚠️ **This is a private package** - not publicly available on npm.
+
+### For Development (Local)
+
+Currently configured with local file reference:
 
 ```bash
-# In share-component-lib
-yarn link
-
-# In umijs-mono-repo
-yarn link "@share-component-lib/components"
+# In umijs-mono-repo - already configured
+# package.json has: "file:../share-component-lib"
+yarn install
 ```
 
-Or install via local path:
+### For Production
 
-```bash
-yarn add file:../share-component-lib
-```
+See [PRIVATE-PACKAGE-SETUP.md](./PRIVATE-PACKAGE-SETUP.md) for distribution options:
+- GitHub Packages
+- Git Direct Install
+- Private npm Registry (Verdaccio)
+- Local File Reference (current)
 
 ## Components
 
@@ -169,6 +173,12 @@ function BruceHome() {
 2. Export from `src/components/YourComponent/index.ts`
 3. Add to main `src/index.ts`
 4. Build and test
+
+## Privacy
+
+🔒 **Private Package** - This package is configured as private and requires authentication to install.
+
+See [PRIVATE-PACKAGE-SETUP.md](./PRIVATE-PACKAGE-SETUP.md) for setup instructions.
 
 ## License
 

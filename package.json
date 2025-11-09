@@ -5,13 +5,14 @@
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/types/index.d.ts",
+	"private": true,
 	"files": [
 		"dist",
 		"README.md",
 		"LICENSE"
 	],
 	"publishConfig": {
-		"access": "public"
+		"access": "restricted"
 	},
 	"scripts": {
 		"build": "yarn clean && rollup -c rollup.config.cjs && tsc --declaration --emitDeclarationOnly --outDir dist/types",
