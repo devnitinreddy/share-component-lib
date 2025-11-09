@@ -45,7 +45,7 @@ Test the library in umijs-mono-repo:
 yarn link
 
 # In umijs-mono-repo
-yarn link "@share-component-lib/components"
+yarn link "@devnitinreddy/share-component-lib"
 
 # Test both tenants
 yarn start:clark
@@ -85,11 +85,11 @@ npm publish --access public
 
 ### 1. Verify on npm
 
-Check your package at: `https://www.npmjs.com/package/@share-component-lib/components`
+Check your package at: `https://www.npmjs.com/package/@devnitinreddy/share-component-lib`
 
 Or via CLI:
 ```bash
-npm view @share-component-lib/components
+npm view @devnitinreddy/share-component-lib
 ```
 
 ### 2. Update umijs-mono-repo
@@ -98,10 +98,10 @@ In `umijs-mono-repo`, update to use the published package:
 
 ```bash
 # Remove local link
-yarn unlink "@share-component-lib/components"
+yarn unlink "@devnitinreddy/share-component-lib"
 
 # Install from npm
-yarn add @share-component-lib/components@latest
+yarn add @devnitinreddy/share-component-lib@latest
 ```
 
 ### 3. Test the Published Package
@@ -143,7 +143,7 @@ git push --tags
 
 ### Package Name Already Exists
 
-If `@share-component-lib/components` is taken:
+If `@devnitinreddy/share-component-lib` is taken:
 
 1. Choose a different name in `package.json`
 2. Update imports in `umijs-mono-repo`
@@ -173,7 +173,7 @@ In `umijs-mono-repo/package.json`:
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "file:../share-component-lib"
+    "@devnitinreddy/share-component-lib": "file:../share-component-lib"
   }
 }
 ```
@@ -196,7 +196,7 @@ Update `package.json`:
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "github:nitinreddy3/share-component-lib#main"
+    "@devnitinreddy/share-component-lib": "github:nitinreddy3/share-component-lib#main"
   }
 }
 ```
@@ -283,10 +283,10 @@ jobs:
 
 ```bash
 # Unpublish a specific version
-npm unpublish @share-component-lib/components@1.0.0
+npm unpublish @devnitinreddy/share-component-lib@1.0.0
 
 # Deprecate instead (recommended)
-npm deprecate @share-component-lib/components@1.0.0 "Use version 1.0.1 instead"
+npm deprecate @devnitinreddy/share-component-lib@1.0.0 "Use version 1.0.1 instead"
 ```
 
 ## Best Practices
@@ -302,5 +302,5 @@ npm deprecate @share-component-lib/components@1.0.0 "Use version 1.0.1 instead"
 
 **Current Version**: 1.0.0  
 **Status**: Ready for publishing  
-**Package Name**: `@share-component-lib/components`
+**Package Name**: `@devnitinreddy/share-component-lib`
 

@@ -1,10 +1,10 @@
 # Distribution Guide
 
-This guide explains different ways to distribute and consume the `@share-component-lib/components` package.
+This guide explains different ways to distribute and consume the `@devnitinreddy/share-component-lib` package.
 
 ## Current Configuration
 
-**Package**: `@share-component-lib/components`  
+**Package**: `@devnitinreddy/share-component-lib`  
 **Status**: Public npm package  
 **Version**: 1.0.0
 
@@ -18,9 +18,9 @@ This guide explains different ways to distribute and consume the `@share-compone
 
 **Installation**:
 ```bash
-npm install @share-component-lib/components
+npm install @devnitinreddy/share-component-lib
 # or
-yarn add @share-component-lib/components
+yarn add @devnitinreddy/share-component-lib
 ```
 
 **Pros**:
@@ -46,7 +46,7 @@ yarn add @share-component-lib/components
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "file:../share-component-lib"
+    "@devnitinreddy/share-component-lib": "file:../share-component-lib"
   }
 }
 ```
@@ -90,7 +90,7 @@ Or in `package.json`:
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "github:nitinreddy3/share-component-lib#main"
+    "@devnitinreddy/share-component-lib": "github:nitinreddy3/share-component-lib#main"
   }
 }
 ```
@@ -198,7 +198,7 @@ Then update `umijs-mono-repo`:
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "^1.0.0"
+    "@devnitinreddy/share-component-lib": "^1.0.0"
   }
 }
 ```
@@ -224,7 +224,7 @@ Set up automated publishing via GitHub Actions (see [PUBLISHING.md](./PUBLISHING
    ```json
    {
      "dependencies": {
-       "@share-component-lib/components": "^1.0.0"
+       "@devnitinreddy/share-component-lib": "^1.0.0"
      }
    }
    ```
@@ -241,7 +241,7 @@ Set up automated publishing via GitHub Actions (see [PUBLISHING.md](./PUBLISHING
    ```json
    {
      "dependencies": {
-       "@share-component-lib/components": "file:../share-component-lib"
+       "@devnitinreddy/share-component-lib": "file:../share-component-lib"
      }
    }
    ```
@@ -300,7 +300,7 @@ npm login
 
 **Install from npm**:
 ```bash
-yarn add @share-component-lib/components
+yarn add @devnitinreddy/share-component-lib
 ```
 
 **Install locally (current)**:

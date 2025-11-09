@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `@share-component-lib/components` package has been converted from **private** to **public** npm package configuration.
+The `@devnitinreddy/share-component-lib` package has been converted from **private** to **public** npm package configuration.
 
 ## What Changed
 
@@ -122,7 +122,7 @@ The `@share-component-lib/components` package has been converted from **private*
    ```
 
 5. **Verify**:
-   Visit: `https://www.npmjs.com/package/@share-component-lib/components`
+   Visit: `https://www.npmjs.com/package/@devnitinreddy/share-component-lib`
 
 ---
 
@@ -134,7 +134,7 @@ The `@share-component-lib/components` package has been converted from **private*
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "file:../share-component-lib"
+    "@devnitinreddy/share-component-lib": "file:../share-component-lib"
   }
 }
 ```
@@ -143,7 +143,7 @@ The `@share-component-lib/components` package has been converted from **private*
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "^1.0.0"
+    "@devnitinreddy/share-component-lib": "^1.0.0"
   }
 }
 ```
@@ -151,7 +151,7 @@ The `@share-component-lib/components` package has been converted from **private*
 ### In Any React Project
 
 ```bash
-npm install @share-component-lib/components
+npm install @devnitinreddy/share-component-lib
 
 # Peer dependencies also required
 npm install react react-dom @material-ui/core
@@ -255,7 +255,7 @@ npm publish --access public
 
 ## Current Status
 
-**Package Name**: `@share-component-lib/components`  
+**Package Name**: `@devnitinreddy/share-component-lib`  
 **Version**: 1.0.0  
 **Status**: ✅ Configured as public  
 **Ready to Publish**: ✅ Yes  

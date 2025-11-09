@@ -49,6 +49,6 @@ jobs:
               repo: context.repo.repo,
               tag_name: `v${package.version}`,
               name: `Release v${package.version}`,
-              body: `Published to npm: https://www.npmjs.com/package/@share-component-lib/components/v/${package.version}`,
+              body: `Published to npm: https://www.npmjs.com/package/@devnitinreddy/share-component-lib/v/${package.version}`,
             });
 

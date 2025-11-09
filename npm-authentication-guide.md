@@ -84,7 +84,7 @@ npm publish
 // umijs-mono-repo/package.json
 {
   "dependencies": {
-    "@share-component-lib/components": "file:../share-component-lib"
+    "@devnitinreddy/share-component-lib": "file:../share-component-lib"
   }
 }
 ```
@@ -107,7 +107,7 @@ Or in package.json:
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "github:nitinreddy3/share-component-lib#main"
+    "@devnitinreddy/share-component-lib": "github:nitinreddy3/share-component-lib#main"
   }
 }
 ```

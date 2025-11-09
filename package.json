@@ -1,5 +1,5 @@
 {
-	"name": "@share-component-lib/components",
+	"name": "@devnitinreddy/share-component-lib",
 	"version": "1.0.0",
 	"description": "Shared component library for multi-tenant UmiJS applications",
 	"main": "dist/cjs/index.js",

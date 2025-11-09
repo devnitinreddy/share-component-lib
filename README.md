@@ -1,6 +1,6 @@
 # Shared Component Library
 
-> **📦 PUBLIC PACKAGE**: Available on npm as `@share-component-lib/components`
+> **📦 PUBLIC PACKAGE**: Available on npm as `@devnitinreddy/share-component-lib`
 
 A reusable component library for multi-tenant UmiJS applications. Built with React 17, TypeScript, and Material-UI v4.
 
@@ -18,10 +18,10 @@ A reusable component library for multi-tenant UmiJS applications. Built with Rea
 
 ```bash
 # Using npm
-npm install @share-component-lib/components
+npm install @devnitinreddy/share-component-lib
 
 # Using yarn
-yarn add @share-component-lib/components
+yarn add @devnitinreddy/share-component-lib
 ```
 
 ### For Local Development
@@ -41,7 +41,7 @@ yarn install
 A customizable banner component with theme support.
 
 ```tsx
-import { Banner } from '@share-component-lib/components'
+import { Banner } from '@devnitinreddy/share-component-lib'
 
 // Basic usage
 <Banner title="Welcome" subtitle="To our application" />
@@ -135,7 +135,7 @@ Each tenant can override the Banner theme:
 
 ```tsx
 // tenants/clark/pages/index.tsx
-import { Banner } from '@share-component-lib/components'
+import { Banner } from '@devnitinreddy/share-component-lib'
 
 function ClarkHome() {
   return (
@@ -153,7 +153,7 @@ function ClarkHome() {
 
 ```tsx
 // tenants/bruce/pages/index.tsx
-import { Banner } from '@share-component-lib/components'
+import { Banner } from '@devnitinreddy/share-component-lib'
 
 function BruceHome() {
   return (

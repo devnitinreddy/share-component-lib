@@ -1,6 +1,6 @@
 # Complete npm Publishing Guide
 
-This guide walks you through publishing `@share-component-lib/components` as a **public npm package**.
+This guide walks you through publishing `@devnitinreddy/share-component-lib` as a **public npm package**.
 
 ## Prerequisites
 
@@ -103,7 +103,7 @@ This will show you:
 
 Example output:
 ```
-npm notice 📦  @share-component-lib/components@1.0.0
+npm notice 📦  @devnitinreddy/share-component-lib@1.0.0
 npm notice === Tarball Contents ===
 npm notice 1.2kB  LICENSE
 npm notice 4.0kB  README.md
@@ -113,7 +113,7 @@ npm notice 24.8kB dist/esm/index.js
 npm notice 1.0kB  dist/esm/index.js.map
 npm notice 450B   dist/types/index.d.ts
 npm notice === Tarball Details ===
-npm notice name:          @share-component-lib/components
+npm notice name:          @devnitinreddy/share-component-lib
 npm notice version:       1.0.0
 npm notice package size:  15.2 kB
 npm notice unpacked size: 58.0 kB
@@ -132,29 +132,29 @@ npm publish --access public
 
 Expected output:
 ```
-npm notice 📦  @share-component-lib/components@1.0.0
+npm notice 📦  @devnitinreddy/share-component-lib@1.0.0
 npm notice === Tarball Contents ===
 ...
 npm notice === Tarball Details ===
 ...
 npm notice Publishing to https://registry.npmjs.org/
-+ @share-component-lib/components@1.0.0
++ @devnitinreddy/share-component-lib@1.0.0
 ```
 
 ### Step 5: Verify Publication
 
 1. **Via npm CLI**:
 ```bash
-npm view @share-component-lib/components
+npm view @devnitinreddy/share-component-lib
 ```
 
 2. **Via npmjs.com**:
-Visit: `https://www.npmjs.com/package/@share-component-lib/components`
+Visit: `https://www.npmjs.com/package/@devnitinreddy/share-component-lib`
 
 3. **Test Installation**:
 ```bash
 # In a test project
-npm install @share-component-lib/components
+npm install @devnitinreddy/share-component-lib
 ```
 
 ## Troubleshooting
@@ -164,7 +164,7 @@ npm install @share-component-lib/components
 **Cause**: You don't have permission to publish under the `@share-component-lib` scope.
 
 **Solution**:
-- Create your own scope: Change `@share-component-lib/components` to `@YOUR_USERNAME/components`
+- Create your own scope: Change `@devnitinreddy/share-component-lib` to `@YOUR_USERNAME/components`
 - Or create an npm organization: [Create organization](https://www.npmjs.com/org/create)
 
 ### Error: "402 Payment Required"
@@ -284,7 +284,7 @@ Update `package.json`:
 ```json
 {
   "dependencies": {
-    "@share-component-lib/components": "^1.0.0"
+    "@devnitinreddy/share-component-lib": "^1.0.0"
   }
 }
 ```
@@ -298,7 +298,7 @@ yarn install
 ### In Any React Project
 
 ```bash
-npm install @share-component-lib/components
+npm install @devnitinreddy/share-component-lib
 
 # Peer dependencies
 npm install react react-dom @material-ui/core
